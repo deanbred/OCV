@@ -1,0 +1,10 @@
+Z:\Cryoview\Cryoview_StaCart_tlea\libHDF4\Debug\libHDF4.vcxprojAssemblyReference.cache
+Z:\Cryoview\Cryoview_StaCart_tlea\libHDF4\Debug\libHDF4.vcxproj.CopyComplete
+\\redwood\oudvmt\src\work\tlea\100GBARCryoview\100GBAR_tlea\libHDF4\Debug\libHDF4.vcxproj.CopyComplete
+\\redwood\oudvmt\src\work\tlea\100GBARCryoview\100GBAR_tlea\libHDF4\Debug\libHDF4.vcxproj.AssemblyReference.cache
+Z:\100GBARCryoview\100GBAR_tlea\libHDF4\Debug\libHDF4.vcxproj.AssemblyReference.cache
+Z:\100GBARCryoview\100GBAR_tlea\libHDF4\Debug\libHDF4.vcxproj.CopyComplete
+\\redwood\sdg\oudvmt\src\work\tlea\100GBARCryoview\tlea\libHDF4\Debug\libHDF4.vcxproj.AssemblyReference.cache
+\\redwood\sdg\oudvmt\src\work\tlea\100GBARCryoview\tlea\libHDF4\Debug\libHDF4.vcxproj.CopyComplete
+E:\Projects\OnCartViewing\branches\dbred\libHDF4\Debug\libHDF4.vcxproj.AssemblyReference.cache
+E:\Projects\OnCartViewing\branches\dbred\libHDF4\Debug\libHDF4.vcxproj.CopyComplete

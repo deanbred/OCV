@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1D61A5E-9FF9-49FB-8891-A97AF2E41874}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Objective_ViewModel</RootNamespace>
+    <AssemblyName>Objective_ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Prism, Version=7.2.0.1422, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.7.2.0.1422\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Objective_ViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cryoview_ModuleMessages\Cryoview_ModuleMessages.csproj">
+      <Project>{4d13b126-1dd3-4f79-b9f6-804951088832}</Project>
+      <Name>Cryoview_ModuleMessages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryoview_Tools\Cryoview_Tools.csproj">
+      <Project>{a77c8f07-1bdb-41aa-9365-b8cc7b0bcad6}</Project>
+      <Name>Cryoview_Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB_Model\DB_Model.csproj">
+      <Project>{7f77e1dd-054a-43df-a6b2-02a1794f7ea4}</Project>
+      <Name>DB_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libUtil\libUtil.csproj">
+      <Project>{f0d1f875-7827-47eb-ad49-a519eb89979f}</Project>
+      <Name>libUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objective_Interface\Objective_Interface.csproj">
+      <Project>{c94ba0b4-ec4c-4916-afa3-313e6abd56fa}</Project>
+      <Name>Objective_Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objective_Navitar_Model\Objective_Navitar_Model.csproj">
+      <Project>{08354600-d649-4ba1-9517-f94192cd020f}</Project>
+      <Name>Objective_Navitar_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objective_Virtual_Model\Objective_Virtual_Model.csproj">
+      <Project>{b4b7a5be-377d-43fe-917a-294bfa6a6e1f}</Project>
+      <Name>Objective_Virtual_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

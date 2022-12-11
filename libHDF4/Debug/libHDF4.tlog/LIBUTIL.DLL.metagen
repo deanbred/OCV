@@ -1,0 +1,235 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly libUtil, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class LLE.Util.DebugMenuException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LLE.Util.DebugMenuQuitException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Exception
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LLE.Util.DebugMenu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Run(): PrivateScope, Public, HideBySig
+    Stop(): PrivateScope, Public, HideBySig
+    AddMenuItem(String, MenuItemDelegate, Boolean): PrivateScope, Public, HideBySig
+    AddMenuItem(String, MenuItemDelegate): PrivateScope, Public, HideBySig
+    EnableMenuItem(Int32, Boolean): PrivateScope, Public, HideBySig
+    PromptByte(): PrivateScope, Public, HideBySig
+    PromptByte(String): PrivateScope, Public, HideBySig
+    PromptByte(String, Byte): PrivateScope, Public, HideBySig
+    PromptByte(String, Byte, Byte): PrivateScope, Public, HideBySig
+    PromptByte(String, Byte, Byte, Byte): PrivateScope, Public, HideBySig
+    PromptShort(): PrivateScope, Public, HideBySig
+    PromptShort(String): PrivateScope, Public, HideBySig
+    PromptShort(String, Int16): PrivateScope, Public, HideBySig
+    PromptShort(String, Int16, Int16): PrivateScope, Public, HideBySig
+    PromptShort(String, Int16, Int16, Int16): PrivateScope, Public, HideBySig
+    PromptInt(): PrivateScope, Public, HideBySig
+    PromptInt(String): PrivateScope, Public, HideBySig
+    PromptInt(String, Int32): PrivateScope, Public, HideBySig
+    PromptInt(String, Int32, Int32): PrivateScope, Public, HideBySig
+    PromptInt(String, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    PromptLong(): PrivateScope, Public, HideBySig
+    PromptLong(String): PrivateScope, Public, HideBySig
+    PromptLong(String, Int64): PrivateScope, Public, HideBySig
+    PromptLong(String, Int64, Int64): PrivateScope, Public, HideBySig
+    PromptLong(String, Int64, Int64, Int64): PrivateScope, Public, HideBySig
+    PromptFloat(): PrivateScope, Public, HideBySig
+    PromptFloat(String): PrivateScope, Public, HideBySig
+    PromptFloat(String, Single): PrivateScope, Public, HideBySig
+    PromptFloat(String, Single, Single): PrivateScope, Public, HideBySig
+    PromptFloat(String, Single, Single, Single): PrivateScope, Public, HideBySig
+    PromptDouble(): PrivateScope, Public, HideBySig
+    PromptDouble(String): PrivateScope, Public, HideBySig
+    PromptDouble(String, Double): PrivateScope, Public, HideBySig
+    PromptDouble(String, Double, Double): PrivateScope, Public, HideBySig
+    PromptDouble(String, Double, Double, Double): PrivateScope, Public, HideBySig
+    PromptBool(): PrivateScope, Public, HideBySig
+    PromptBool(String): PrivateScope, Public, HideBySig
+    PromptBool(String, Boolean): PrivateScope, Public, HideBySig
+    PromptString(): PrivateScope, Public, HideBySig
+    PromptString(String): PrivateScope, Public, HideBySig
+    PromptString(String, String): PrivateScope, Public, HideBySig
+    PromptString(String, String, Boolean): PrivateScope, Public, HideBySig
+    PromptString(String, String, Boolean, Int32): PrivateScope, Public, HideBySig
+    PromptString(String, String, Boolean, Int32, Int32): PrivateScope, Public, HideBySig
+    PromptString(String, String, Boolean, Int32, Int32, String): PrivateScope, Public, HideBySig
+    PromptList(IList): PrivateScope, Public, HideBySig
+    PromptList(IList, String): PrivateScope, Public, HideBySig
+    PromptList(IList, String, Object): PrivateScope, Public, HideBySig
+    PromptListIndex(IList): PrivateScope, Public, HideBySig
+    PromptListIndex(IList, String): PrivateScope, Public, HideBySig
+    PromptListIndex(IList, String, Int32): PrivateScope, Public, HideBySig
+Class LLE.Util.Disposable: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IsDisposed(): PrivateScope, Public, HideBySig
+Class LLE.Util.Endian: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    isLittleEndian(): PrivateScope, Public, Static, HideBySig
+    swap(Byte[], Int32, Byte[], Int32, Int32, Int32, Boolean): PrivateScope, Public, Static, HideBySig
+Class LLE.Util.LogFile: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    LLE.Util.ILog
+    System.IDisposable
+  Methods:
+    WriteLine(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Write(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Interface LLE.Util.ILog: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    WriteLine(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Write(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface LLE.Util.IOpenable: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    open(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    isOpen(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class LLE.Util.LLEException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Exception
+    Void .ctor(LLE.Util.LogLevel, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(LLE.Util.LogLevel, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Location 'get ' : 
+  Methods:
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class LLE.Util.LLEThread: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.Util.Disposable
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Threading.ApartmentState): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Threading.ApartmentState, System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Start(ThreadStart): PrivateScope, Public, HideBySig
+    Start(): PrivateScope, Public, HideBySig
+    IsStarted(): PrivateScope, Public, HideBySig
+    Stop(): PrivateScope, Public, HideBySig
+    Wake(): PrivateScope, Public, HideBySig
+    Join(Int32): PrivateScope, Public, HideBySig
+    Join(): PrivateScope, Public, HideBySig
+    Join(Object, Int32): PrivateScope, Public, HideBySig
+    Join(Object): PrivateScope, Public, HideBySig
+    Pause(Boolean): PrivateScope, Public, HideBySig
+    IsPaused(): PrivateScope, Public, HideBySig
+    IsStopped(): PrivateScope, Public, HideBySig
+    IsStopped(Boolean): PrivateScope, Public, HideBySig
+    IsStopped(Int32): PrivateScope, Public, HideBySig
+    IsStopped(Int32, Boolean): PrivateScope, Public, HideBySig
+Class LLE.Util.Log: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Fields:
+    LLE.Util.Log Instance : Public, Static
+  Methods:
+    SetLogLevel(LogLevel): PrivateScope, Public, HideBySig
+    WriteLine(LogLevel, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Write(LogLevel, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddLog(ILog): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    RemoveLog(ILog): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class LLE.Util.LogConsole: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    LLE.Util.ILog
+  Methods:
+    WriteLine(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Write(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class LLE.Util.LogDebug: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    LLE.Util.ILog
+  Methods:
+    WriteLine(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Write(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct LLE.Util.LogLevel: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    LLE.Util.LogLevel Emerg = 0 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Alert = 1 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Crit = 2 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Err = 3 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Warning = 4 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Notice = 5 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Info = 6 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug = 7 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug0 = 8 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug1 = 9 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug2 = 10 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug3 = 11 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug4 = 12 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug5 = 13 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug6 = 14 : Public, Static, Literal, HasDefault
+    LLE.Util.LogLevel Debug7 = 15 : Public, Static, Literal, HasDefault
+Class LLE.Util.LogTrace: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    LLE.Util.ILog
+  Methods:
+    WriteLine(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Write(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class LLE.Util.MathUtils: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    MinMax(T, T, T): PrivateScope, Public, Static, HideBySig
+Class LLE.Util.MinMaxAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(SByte, SByte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int16, Int16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int64, Int64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte, Byte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt16, UInt16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt32, UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt64, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Single, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Min(Object, String, Decimal): PrivateScope, Public, Static, HideBySig
+    Max(Object, String, Decimal): PrivateScope, Public, Static, HideBySig
+Class LLE.Util.Set`1[T]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: T
+  :System.Collections.Generic.Dictionary`2[T,T]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Add(T): PrivateScope, Public, HideBySig
+Class LLE.Util.SortedSet`1[T]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: T
+  :System.Collections.Generic.SortedDictionary`2[T,T]
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Add(T): PrivateScope, Public, HideBySig
+Class LLE.Util.StringAnsi: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.Util.Disposable
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Ptr(): PrivateScope, Public, HideBySig
+Class LLE.Util.StringUnicode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.Util.Disposable
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LLE.Util.Types: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    IsTypeOf(Object): PrivateScope, Public, Static, HideBySig
+Class LLE.Util.DebugMenu+MenuItemDelegate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class LLE.Util.LLEThread+ThreadStart: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(LLEThread): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(LLEThread, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask

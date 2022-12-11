@@ -1,0 +1,107 @@
+﻿<Window x:Class="Cryoview_Main_View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:conv="clr-namespace:Converters"
+        xmlns:vm="clr-namespace:Cryoview_Main_ViewModel;assembly=Cryoview_Main_ViewModel"
+        Name="mainWindow"
+        Title="Cryoview 100GBAR" Height="850" Width="1790.5"
+        Loaded="CryoviewMainView_Loaded"
+        Initialized="CryoviewMainView_Initialized"
+        ContentRendered="CryoviewMainView_ContentRendered"
+        Closing="CryoviewMainView_Closing"
+        Closed="CryoviewMainView_Closed"
+        >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Cryoview_Library;component/Cryoview_Library.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="724*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.Row="0" Grid.Column="0" IsMainMenu="True" Grid.ColumnSpan="3">
+            <MenuItem Header="_File">
+                <MenuItem Header="Exit" Click="mnuFileExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="About" Click="mnuHelpAbout_Click"/>
+            </MenuItem>
+        </Menu>
+        <TabControl Name="tabImageViewOne" Grid.Row="1" Grid.Column="0" Background="LightYellow" >
+        </TabControl>
+        <TabControl Name="tabImageViewTwo" Grid.Row="1" Grid.Column="2" Background="LightYellow"  >
+        </TabControl>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="73*"/>
+            </Grid.RowDefinitions>
+
+            <ToolBarTray Name="tlbrtrayMain" IsLocked="True">
+                <ToolBar Height="187" VerticalAlignment="Top">
+                    <Border BorderBrush="blue" BorderThickness="2" Margin="2">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical" Margin="5">
+                                <Label Content="Tempuratures:" Style="{StaticResource lblStyleCaption}" />
+                                <Label Content="Layering Sphere:" Style="{StaticResource lblStyleCaption}" />
+                                <Label Name="LSTemplbl" Content="{Binding Path=LayeringSphereTemp, 
+                                    Converter={conv:ConvertSingleToPrecision3}}" Style="{StaticResource lblStyleSetting}" />
+                                <Label Content="Cold Finger Extension:" Style="{StaticResource lblStyleCaption}" />
+                                <Label Name="CFETemplbl" Content="{Binding Path=ColdFingerExtTemp, 
+                                    Converter={conv:ConvertSingleToPrecision3}}" Style="{StaticResource lblStyleSetting}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="5">
+                                <Label Content="Target ID:" Style="{StaticResource lblStyleCaption}"  />
+                                <Label Name="TIDlbl" Content="{Binding Path=TargetID}" Style="{StaticResource lblStyleSetting}" />
+                                <Label Content="HDF" Style="{StaticResource lblStyleCaption}" />
+                                <Button x:Name="cmdHDFSaveAll"  Content="Save All"  Style="{StaticResource cmdStyleCaption}" Click="cmdHDF_Save_All_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="5">
+                                <Label Content="Illuminator Channel 1" Style="{StaticResource lblStyleCaption}" />
+                                <Button x:Name="cmdSetIlluminatorCH1High" Content="High" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Illuminator_CH1_High_Click"/>
+                                <Button x:Name="cmdSetIlluminatorCH1Low" Content="Low" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Illuminator_CH1_Low_Click"/>
+                                <Label Content="Illuminator Channel 2" Style="{StaticResource lblStyleCaption}" />
+                                <Button x:Name="cmdSetIlluminatorCH2High" Content="High" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Illuminator_CH2_High_Click"/>
+                                <Button x:Name="cmdSetIlluminatorCH2Low" Content="Low" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Illuminator_CH2_Low_Click"/>
+                            </StackPanel>
+                            <DockPanel>
+                                <Label DockPanel.Dock="Top" Content="Current Task:                                            " Style="{StaticResource lblStyleCaption}"/>
+                                <Label DockPanel.Dock="Bottom" VerticalContentAlignment="Stretch" Name="Tasklbl" Content="{Binding Path=TaskMessage}"  Style="{StaticResource lblStyleSetting}"/>
+                            </DockPanel>
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="Network:               " Style="{StaticResource lblStyleCaption}"/>
+                                <Label Name="NetworkConnectionlbl" Content="{Binding Path=NetworkConnected, 
+                                    Converter={conv:ConvertBoolToConnectedNotConnected}}" Style="{StaticResource lblStyleSetting}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </ToolBar>
+            </ToolBarTray>
+
+            <TabControl Name="tabFunctionView" Grid.Row="1" Grid.Column="0" />
+        </Grid>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Button Content="Clear App Status" Click="cmdClear_App_Status_Click" Style="{StaticResource cmdStyleCaption}"/>
+            <Label VerticalContentAlignment="Stretch" Name="Statuslbl" Content="{Binding Path=StatusMessage}"  Style="{StaticResource lblStyleSetting}" Width="1645"/>
+        </StackPanel>
+        
+
+    </Grid>
+</Window>

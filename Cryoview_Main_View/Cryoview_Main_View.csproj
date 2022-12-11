@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E965F4F7-E2B1-41F3-BD69-553274D4FAE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cryoview_Main_View</RootNamespace>
+    <AssemblyName>Cryoview_Main_View</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Cryoview_Main_View.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Prism, Version=7.2.0.1422, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.7.2.0.1422\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Cryoview_Main_View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cryoview_Converters.cs" />
+    <Compile Include="Cryoview_Main_View.xaml.cs">
+      <DependentUpon>Cryoview_Main_View.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AppMainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SplashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cryoview_FileLog\Cryoview_FileLog.csproj">
+      <Project>{467c59ee-2492-45c6-8328-58d2e4e4d34f}</Project>
+      <Name>Cryoview_FileLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryoview_Library\Cryoview_Library.csproj">
+      <Project>{d3770977-4ee2-4dd6-b5c6-dfa8b92bac12}</Project>
+      <Name>Cryoview_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryoview_Main_ViewModel\Cryoview_Main_ViewModel.csproj">
+      <Project>{fd377793-197c-46c5-ac68-d0525127092d}</Project>
+      <Name>Cryoview_Main_ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryoview_ModuleMessages\Cryoview_ModuleMessages.csproj">
+      <Project>{4d13b126-1dd3-4f79-b9f6-804951088832}</Project>
+      <Name>Cryoview_ModuleMessages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryoview_Tools\Cryoview_Tools.csproj">
+      <Project>{a77c8f07-1bdb-41aa-9365-b8cc7b0bcad6}</Project>
+      <Name>Cryoview_Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB_Model\DB_Model.csproj">
+      <Project>{7f77e1dd-054a-43df-a6b2-02a1794f7ea4}</Project>
+      <Name>DB_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICryoviewWindow\Cryoview_IWindow.csproj">
+      <Project>{8a54eea9-a1e9-4681-afee-91d7f346674f}</Project>
+      <Name>Cryoview_IWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Image_Basler_Model\Image_Basler_Model.csproj">
+      <Project>{8221585c-918f-4c22-b579-60d088972df5}</Project>
+      <Name>Image_Basler_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libUtil\libUtil.csproj">
+      <Project>{f0d1f875-7827-47eb-ad49-a519eb89979f}</Project>
+      <Name>libUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Optical_View\Optical_View.csproj">
+      <Project>{fbc9821c-4f6b-49aa-8ff6-142e19eef097}</Project>
+      <Name>Optical_View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XRay_Interface\XRay_Interface.csproj">
+      <Project>{08c04cd2-c6bd-417e-a262-e757a43e3bd6}</Project>
+      <Name>XRay_Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XRay_Physical_Model\XRay_Physical_Model.csproj">
+      <Project>{4b6a406a-6269-4291-b537-3bda5f3a8560}</Project>
+      <Name>XRay_Physical_Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XRay_View\XRay_View.csproj">
+      <Project>{e1b29621-759b-49ea-8ef7-24dd65285041}</Project>
+      <Name>XRay_View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XRay_Virtual_Model\XRay_Virtual_Model.csproj">
+      <Project>{e6c45c19-64a3-4541-b354-7d597d6804f0}</Project>
+      <Name>XRay_Virtual_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

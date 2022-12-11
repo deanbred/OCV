@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="Focus_View.FocusView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Focus_View"
+             xmlns:conv="clr-namespace:Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="539" d:DesignWidth="780"
+             Loaded="FocusView_Loaded">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- specs how to display text -->
+                <ResourceDictionary Source="pack://application:,,,/Cryoview_Library;component/Cryoview_Library.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="221*"/>
+            <RowDefinition Height="219*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.RowSpan="4" Background="White"/>
+        
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <Label Content="Optical View 1: " Style="{StaticResource lblStyleCaption}" />
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Last Measured Focus:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="currentFocus1lbl" Content="{Binding CurrentFocusView1}" Style="{StaticResource lblStyleSetting}"  Width="163"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="setROI1btn" Content="Use ROI" Style="{StaticResource cmdStyleCaption}" Click="cmdSetROI_Click" Width="150"/>
+                <Button x:Name="removeROI1btn" Content="Remove ROI" Style="{StaticResource cmdStyleCaption}" Click="cmdRemoveROI_Click" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="measureFocus1btn" Content="Measure Focus" Style="{StaticResource cmdStyleCaption}" Click="cmdMeasure_Focus_Click" Width="150"/>
+                <Button x:Name="findBestFocus1btn" Content="Auto Focus" Style="{StaticResource cmdStyleCaption}" Click="cmdAuto_Focus_Click" Width="150"/>
+                <Button x:Name="cancelFocus1btn" Content="Cancel Auto Focus" Style="{StaticResource cmdStyleCaption}" Click="cmdAuto_Focus_Cancel_Click" Width="150"/>
+            </StackPanel>
+            <Label  x:Name="ROISet1lbl" HorizontalAlignment="Left" Content="{Binding IsRIOSet1}" Style="{StaticResource lblBoolStyleSetting}" Width="150" Height="50"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Vertical">
+            <Label Content="Optical View 2: " Style="{StaticResource lblStyleCaption}" />
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Last Measured Focus:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="currentFocus2lbl" Content="{Binding CurrentFocusView2}" Style="{StaticResource lblStyleSetting}"  Width="163"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="setROI2btn" Content="Use ROI" Style="{StaticResource cmdStyleCaption}" Click="cmdSetROI_Click" Width="150"/>
+                <Button x:Name="removeROI2btn" Content="Remove ROI" Style="{StaticResource cmdStyleCaption}" Click="cmdRemoveROI_Click" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="measureFocus2btn" Content="Measure Focus" Style="{StaticResource cmdStyleCaption}" Click="cmdMeasure_Focus_Click" Width="150"/>
+                <Button x:Name="findBestFocus2btn" Content="Auto Focus" Style="{StaticResource cmdStyleCaption}" Click="cmdAuto_Focus_Click" Width="150"/>
+                <Button x:Name="cancelFocus2btn" Content="Cancel Auto Focus" Style="{StaticResource cmdStyleCaption}" Click="cmdAuto_Focus_Cancel_Click" Width="150"/>
+            </StackPanel>
+            <Label  x:Name="ROISet2lbl" HorizontalAlignment="Left" Content="{Binding IsRIOSet2}" Style="{StaticResource lblBoolStyleSetting}" Width="150" Height="50"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,50 @@
+#region delegates, events
+#endregion delegates, events
+
+#region backing vars
+#endregion backing vars
+
+#region enums
+#endregion enums
+
+#region ctors/dtors/dispose
+#endregion ctors/dtors/dispose
+
+#region factory method
+#endregion factory method
+
+#region initialization
+#endregion initialization
+
+#region windows events
+#endregion windows events
+
+#region IDataErrorInfo
+#endregion IDataErrorInfo
+
+#region MEF
+#endregion MEF
+
+#region properties
+#endregion properties
+
+#region bindable properties
+#endregion bindable properties
+
+#region dependency properties
+#endregion dependency properties
+
+#region ICommands
+#endregion ICommands
+
+#region algorithm code
+#endregion algorithm code
+
+#region hardware code
+#endregion hardware code
+
+#region utility functions
+#endregion utility functions
+
+#region event sinks
+#endregion event sinks

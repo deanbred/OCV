@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nav_sdk</name>
+    </assembly>
+    <members>
+        <member name="T:Navitar.ControllerHub">
+            <summary>
+            The ControllerHub acts as a factory for Controller instances. It is responsible for
+            discovering and enumerating all controllers physically connected to the system over
+            either serial or USB connections.  Discovery and enumeration will occur automatically
+            when the application starts, but can also be repeated on demand by calling the
+            DiscoverControllers method to detect controllers that are connected after program
+            startup.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerHub.#cctor">
+            <summary>
+            At construction time, the hub will internally call DiscoverControllers()
+            to discover and enumerate all connected controllers.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerHub.GetAll">
+            <summary>
+            Returns the collection of all controller instances known to the hub.
+            </summary>
+            <returns>A collection of all connected controllers.</returns>
+        </member>
+        <member name="M:Navitar.ControllerHub.DiscoverControllers">
+            <summary>
+            Discover and enumerate all physically connected controllers.  This method
+            is called automatically at construction of the hub, so the application need
+            only call it if controllers need to be discovered after program startup.
+            A Controller instance will be created for each newly discovered controller.
+            Likewise, Controllers will be dropped for controllers no longer present.
+            Since discovery requires communicating with the controller, the hub will
+            perform the equivalent of a Disconnect() call on each existing Controller 
+            instance before or during the disovery process.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerHub.RemoveController(Navitar.Controller)">
+            <summary>
+            Remove a controller instance from the collection of controllers known to the hub,
+            thus making the connection available to some other program.
+            This method is most useful when performing a firmware upgrade on a controller that
+            is connected via USB, since the Device Firmware Upgrade protocol operates over USB.
+            </summary>
+            <param name="controller">the controller instance to be removed</param>
+        </member>
+        <member name="F:Navitar.ControllerHub._controllers">
+            <summary>
+            Controller instances for all controllers found during the most recent
+            discovery attempt.
+            </summary>
+        </member>
+        <member name="T:Navitar.ControllerLegacy">
+            <summary>
+            Legacy (1st generation) controller design, using binary communications.
+            This controller class support the 1st generation 5-phase, 2-phase, servo
+            and LED controllers.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="portName">Name of COM or USB virtual COM port to which controller is connected.</param>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.Connect">
+            <summary>
+            Connect to the controller.
+            </summary>
+        </member>
+        <member name="P:Navitar.ControllerLegacy.Connected">
+            <summary>
+            True if a connection has been established via a successful call to Connect(),
+            false otherwise, and false after a call to Disconnect().
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.Disconnect">
+            <summary>
+            Disconnect from the controller.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.Dispose">
+            <summary>
+            Override from Controller class.  Disconnects the controller, freeing the
+            COM port for use by other programs.
+            </summary>
+        </member>
+        <member name="P:Navitar.ControllerLegacy.Disposed">
+            <summary>
+            Keep track of whether Dispose() method has been called.
+            </summary>
+        </member>
+        <member name="T:Navitar.ControllerLegacy.Packet">
+            <summary>
+            The message Packet structure.  All legacy communicaton consists of messages
+            of this structure.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.SerializePacket(Navitar.ControllerLegacy.Packet)">
+            <summary>
+            This method first completes the Packet by computing and appending the checksum
+            to the Packet.  Then, the complete Packet is serialized and returned.
+            </summary>
+            <param name="packet">Packet to be serialized</param>
+            <returns>Array of Bytes containing the serialized Packet</returns>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.DeserializePacket(System.Byte[])">
+            <summary>
+            Deserializes the Bytes in the supplied buffer and returns a Packet.
+            </summary>
+            <param name="buffer">Array of Bytes containing the serialized Packet</param>
+            <returns>The deserialized Packet</returns>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.ReadPacketStream(System.Int32)">
+            <summary>
+            Read a a Byte stream of the specified length from the connection.
+            This method will eventually throw if it cannot read the requested
+            number of bytes after a reasonable effort.
+            </summary>
+            <param name="length">Number of Bytes to read</param>
+            <returns>Array containing the received bytes</returns>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.FlushConnection">
+            <summary>
+            Read and discard all pending received Bytes on the connection.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.Write(System.UInt32,System.Int32)">
+            <summary>
+            Write a value to a controller register.
+            </summary>
+            <param name="register">a valid register address for the connected controller</param>
+            <param name="value">the value to be written to the register</param>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.Read(System.UInt32)">
+            <summary>
+            Read a value from a controller register.
+            </summary>
+            <param name="register">a valid register address for the connected controller</param>
+            <returns>the current register value</returns>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.Stop">
+            <summary>
+            Stop all motion immediately.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.SaveSetup">
+            <summary>
+            Save all setup register values to non-volatile storage on the controller.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerLegacy.LoadDefaultSetup">
+            <summary>
+            Load all setup register values with factory default values. Note, this does 
+            not effect the values in non-volatile storage.
+            </summary>
+        </member>
+        <member name="P:Navitar.ControllerLegacy.Port">
+            <summary>
+            The actual serial port object for the connection.
+            </summary>
+        </member>
+        <member name="T:Navitar.Controller">
+            <summary>
+            Base class for all controller types.  Includes register definitions for all controller 
+            types and methods that are common to all controller types.
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regOffsetMotor2">
+            <summary>
+            Register number offset for Motor2 registers, relative to Motor 1 registers.
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regProductId">
+            <summary>
+            The controller Product ID code register
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regVersionHW">
+            <summary>
+            Controller Hardware Version Number register
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regVersionDate">
+            <summary>
+            Controller Version Date register
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regVersionSW">
+            <summary>
+            Controller Firmware Version number register
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regProductIdSubclass">
+            <summary>
+            Controller product ID subclass register
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regProductSerialNum">
+            <summary>
+            Controller serial number register.  This is unimplemented on legacy controllers.
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regTarget_1">
+            <summary>
+            Target position register for Motor 1.
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regTarget_2">
+            <summary>
+            Target position register for Motor 2.
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regIncrement_1">
+            <summary>
+            Position delta from current position for Motor 1
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regIncrement_2">
+            <summary>
+            Position delta from current position for Motor 2
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regCurrent_1">
+            <summary>
+            Motor 1 current position
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regCurrent_2">
+            <summary>
+            Motor 2 current position
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regLimit_1">
+            <summary>
+            Limit seek request for motor 1
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regLimit_2">
+            <summary>
+            Limit seek request for motor 2
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regStatus_1">
+            <summary>
+            Motor 1 status
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regStatus_2">
+            <summary>
+            Motor 2 status
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupAcceleration_1">
+            <summary>
+            Motor 1 acceleration setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupAcceleration_2">
+            <summary>
+            Motor 2 acceleration setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupInitialVelocity_1">
+            <summary>
+            Motor 1 initial velocity setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupInitialVelocity_2">
+            <summary>
+            Motor 2 initial velocity setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupMaxVelocity_1">
+            <summary>
+            Motor 1 maximum velocity setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupMaxVelocity_2">
+            <summary>
+            Motor 2 maximum velocity setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupReverseBacklash_1">
+            <summary>
+            Motor 1 reverse backlash setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupReverseBacklash_2">
+            <summary>
+            Motor 2 reverse backlash setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupForwardBacklash_1">
+            <summary>
+            Motor 1 forward backlash setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupForwardBacklash_2">
+            <summary>
+            Motor 2 forward backlash setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupConfig_1">
+            <summary>
+            Motor 1 sensor configuration setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupConfig_2">
+            <summary>
+            Motor 2 sensor configuration setup
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupLimit_1">
+            <summary>
+            Motor 1 limit position value (read only)
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupLimit_2">
+            <summary>
+            Motor 2 limit position value (read only)
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regPwmAbsolute">
+            <summary>
+            Current PWM setpoint for LED controller
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regPwmIncrement">
+            <summary>
+            Increment to PWM setpoint for LED controller
+            </summary>
+        </member>
+        <member name="F:Navitar.Controller.regSetupPwmDefault">
+            <summary>
+            Default setup PWM setpoint for LED controller
+            </summary>
+        </member>
+        <member name="M:Navitar.Controller.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="portName">Name of COM or USB virtual COM port to which controller is connected.</param>
+        </member>
+        <member name="M:Navitar.Controller.Connect">
+            <summary>
+            Connect to the controller.
+            </summary>
+        </member>
+        <member name="P:Navitar.Controller.Connected">
+            <summary>
+            True if a connection has been established via a successful call to Connect(),
+            false otherwise and after a call to Disconnect().
+            </summary>
+        </member>
+        <member name="M:Navitar.Controller.Disconnect">
+            <summary>
+            Disconnect from the controller.
+            </summary>
+        </member>
+        <member name="M:Navitar.Controller.Write(System.UInt32,System.Int32)">
+            <summary>
+            Write a value to a controller register.
+            </summary>
+            <param name="register">a valid register address for the connected controller</param>
+            <param name="value">the value to be written to the register</param>
+        </member>
+        <member name="M:Navitar.Controller.Read(System.UInt32)">
+            <summary>
+            Read a value from a controller register.
+            </summary>
+            <param name="register">a valid register address for the connected controller</param>
+            <returns>the current register value</returns>
+        </member>
+        <member name="M:Navitar.Controller.Stop">
+            <summary>
+            Stop all motion immediately.
+            </summary>
+        </member>
+        <member name="M:Navitar.Controller.SaveSetup">
+            <summary>
+            Save all setup register values to non-volatile storage on the controller.
+            </summary>
+        </member>
+        <member name="M:Navitar.Controller.LoadDefaultSetup">
+            <summary>
+            Load all setup register values with factory default values. Note, this does 
+            not effect the values in non-volatile storage.
+            </summary>
+        </member>
+        <member name="M:Navitar.Controller.Dispose">
+            <summary>
+            Controller class implements IDisposable.  Inheriting classes should override this method.
+            </summary>
+        </member>
+        <member name="P:Navitar.Controller.PortName">
+            <summary>
+            Name of COM port or USB virtual COM port to which controller is connected.
+            </summary>
+        </member>
+        <member name="P:Navitar.Controller.Name">
+            <summary>
+            The user-assigned name of the specific controller.
+            </summary>
+        </member>
+        <member name="P:Navitar.Controller.ProductID">
+            <summary>
+            The read-only Product ID of the specific controller.
+            </summary>
+        </member>
+        <member name="P:Navitar.Controller.ProductSubclass">
+            <summary>
+            The read-only Product Subclass of the specific controller.
+            </summary>
+        </member>
+        <member name="P:Navitar.Controller.Generation">
+            <summary>
+            The controller generation (version in the larger sense).
+            </summary>
+        </member>
+        <member name="T:Navitar.ControllerGen2">
+            <summary>
+            2nd Generation Controller base class.  In general, this class adds capabilities
+            that are not available in 1st generation controllers.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="portName">Name of COM or USB virtual COM port to which controller is connected.</param>
+        </member>
+        <member name="M:Navitar.ControllerGen2.Connect">
+            <summary>
+            Connect to the controller.
+            </summary>
+        </member>
+        <member name="P:Navitar.ControllerGen2.Connected">
+            <summary>
+            True if a connection has been established via a successful call to Connect(),
+            false otherwise, and false after a call to Disconnect().
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.Disconnect">
+            <summary>
+            Disconnect from the controller.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.Write(System.UInt32,System.Int32)">
+            <summary>
+            Write a value to a controller register.
+            </summary>
+            <param name="register">a valid register address for the connected controller</param>
+            <param name="value">the value to be written to the register</param>
+        </member>
+        <member name="M:Navitar.ControllerGen2.Read(System.UInt32)">
+            <summary>
+            Read a value from a controller register.
+            </summary>
+            <param name="register">a valid register address for the connected controller</param>
+            <returns>the current register value</returns>
+        </member>
+        <member name="M:Navitar.ControllerGen2.Stop">
+            <summary>
+            Stop all motion immediately.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.SaveSetup">
+            <summary>
+            Save all setup register values to non-volatile storage on the controller.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.LoadDefaultSetup">
+            <summary>
+            Load all setup register values with factory default values. Note, this does 
+            not effect the values in non-volatile storage.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.EnterBootloader">
+            <summary>
+            Causes the controller to stop all motion, disconnect and immediately
+            enter the bootloader (e.g. to await a firmware upgrade).  Note, communicating
+            to the controller when in the Bootloader requires a separate protocol and is 
+            outside the scope and capability of this API.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.Dispose">
+            <summary>
+            Controller class implements IDisposable.  Inheriting classes should override this method.
+            </summary>
+        </member>
+        <member name="P:Navitar.ControllerGen2.Disposed">
+            <summary>
+            Keep track of whether Dispose() method has been called.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.ExecuteCommand(System.String,System.Int32)">
+            <summary>
+            Send a single command line to the controller.
+            </summary>
+            <param name="cmd">the command string to execute</param>
+            <param name="delayAfterCmd">milliseconds to delay after command is sent.</param>
+        </member>
+        <member name="M:Navitar.ControllerGen2.ReadPrompt">
+            <summary>
+            Read a command prompt, "$ ", from the controller.
+            </summary>
+        </member>
+        <member name="M:Navitar.ControllerGen2.ExecuteCommand(System.String,System.String@)">
+            <summary>
+            Send a single command line to the controller and receive the response.
+            </summary>
+            <param name="cmd">the command string to execute</param>
+            <param name="response">[OUT] the controller response string.</param>
+        </member>
+        <member name="P:Navitar.ControllerGen2.Port">
+            <summary>
+            The actual serial port object for the connection.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+﻿  AssemblyInfo.cpp
+  DFACC.cpp
+  DFNT.cpp
+  SD.cpp
+  SDAttributes.cpp
+  SDDataSet.cpp
+  SDDataSetAttributes.cpp
+  SDFileAttributes.cpp
+  SDLock.cpp
+  Generating Code...
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  libHDF4.vcxproj -> E:\Projects\OnCartViewing\branches\dbred\Build\libHDF4.dll

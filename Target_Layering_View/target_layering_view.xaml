@@ -1,0 +1,155 @@
+﻿<UserControl x:Class="Target_Layering_View.TargetLayeringView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Target_Layering_View"
+             xmlns:conv="clr-namespace:Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="539" d:DesignWidth="780"
+             Loaded="TargetLayeringView_Loaded">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- specs how to display text -->
+                <ResourceDictionary Source="pack://application:,,,/Cryoview_Library;component/Cryoview_Library.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="419*"/>
+            <RowDefinition Height="18*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.RowSpan="5" Background="White"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Single Crystal:" Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="Ring Created:" Style="{StaticResource lblStyleCaption}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="SingleCrystallbl" Content="{Binding SingleCrystalYN}" Style="{StaticResource lblStyleSetting}" Width="80" Height="23"/>
+                <Label x:Name="Ringlbl" Content="{Binding RingYN}" Style="{StaticResource lblStyleSetting}" Width="80" Height="23"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="P1 Defect:" Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="Defect Size:" Style="{StaticResource lblStyleCaption}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="P1FoundYNlbl" Content="{Binding P1FoundYN}" Style="{StaticResource lblStyleSetting}" Width="80" Height="23"/>
+                <Label x:Name="P1Sizelbl" Content="{Binding P1Size}" Style="{StaticResource lblStyleSetting}" Width="80" Height="23"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="DT Valve:" Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="Crystal Catch:" Style="{StaticResource lblStyleCaption}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="DTValveOpenCloselbl" Content="{Binding DTValveOpenClose}" Style="{StaticResource lblStyleSetting}" Width="100" Height="23"/>
+                <Label x:Name="CrystalCatchEnabledlbl" Content="{Binding CrystalCatchEnabled}" Style="{StaticResource lblStyleSetting}" Width="100" Height="23"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="Layering:" Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="P1 Enabled:" Style="{StaticResource lblStyleCaption}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="LayeringEnabledlbl" Content="{Binding LayeringEnabled}" Style="{StaticResource lblStyleSetting}" Width="100" Height="23"/>
+                <Label x:Name="P1Enabledlbl" Content="{Binding P1Enabled}" Style="{StaticResource lblStyleSetting}" Width="100" Height="23"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Label Content="Status:" Style="{StaticResource lblStyleCaption}"/>
+            <Label x:Name="LayeringTabStatuslbl" Content="{Binding LayeringStatus}" Style="{StaticResource lblStyleSetting}" Width="690" Height="20"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Vertical">
+            <Label Content=" " Height="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Crystal Catching:" Style="{StaticResource lblStyleCaption}" FontSize="16" Width="480"/>
+                <Button x:Name="EnableCrystalCatchingbtn" Content="Enable Crystal Catching" Style="{StaticResource cmdStyleCaption}" Click="cmdEnable_Crystal_Catch_Click"/>
+                <Button x:Name="CloseDTValvebtn" Content="Close DT Valve" Style="{StaticResource cmdStyleCaption}" Click="cmdClose_DT_Valve_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Comments:" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="CrystalCatchingCommentstxb" Text="{Binding CrystalCatchComments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Style="{StaticResource txtbxStyleText}" Width="670"/>
+            </StackPanel>
+            <Label Content=" " Height="5"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Cold Finger Temp:" Style="{StaticResource lblStyleCaption}" Width="145"/>
+                <TextBox x:Name="SetColdFingerTemptxb" 
+                         Text="{Binding SetColdFingerTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Style="{StaticResource txtbxStyleText}" Width="100"/>
+                <Button x:Name="SetColdFingerbtn" Content="Set" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Cold_Finger_Click" Width="30" />
+                <Button x:Name="SetColdFingerPlus5btn" Content="+5mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Cold_Finger_Click" Width="45"/>
+                <Button x:Name="SetColdFingerPlus1btn" Content="+1mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Cold_Finger_Click" Width="45" />
+                <Button x:Name="SetColdFingerMinus1btn" Content="-1mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Cold_Finger_Click" Width="45"/>
+                <Button x:Name="SetColdFingerMinus5btn" Content="-5mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Cold_Finger_Click" Width="45"/>
+               
+            </StackPanel>
+            <Label Content=" " Height="5"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Layering Sphere Temp:" Style="{StaticResource lblStyleCaption}" Width="145"/>
+                <TextBox x:Name="SetLayeringSphereTemptxb" 
+                         Text="{Binding SetLayeringSphereTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Style="{StaticResource txtbxStyleText}" Width="100"/>
+                <Button x:Name="SetLayeringSphereTempbtn" Content="Set" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Layering_Sphere_Click" Width="30" />
+                <Button x:Name="SetLayeringSphereTempPlus5btn" Content="+5mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Layering_Sphere_Click" Width="45"/>
+                <Button x:Name="SetLayeringSphereTempPlus1btn" Content="+1mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Layering_Sphere_Click" Width="45" />
+                <Button x:Name="SetLayeringSphereTempMinus1btn" Content="-1mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Layering_Sphere_Click" Width="45"/>
+                <Button x:Name="SetLayeringSphereTempMinus5btn" Content="-5mK" Style="{StaticResource cmdStyleCaption}" Click="cmdSet_Layering_Sphere_Click" Width="45"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Single Crystal:" Style="{StaticResource lblStyleCaption}" Width="125"/>
+                <Button x:Name="SingleCrystalYesbtn" Content="Yes" Style="{StaticResource cmdStyleCaption}" Click="cmdSingle_Crystal_Click" Width="30"/>
+                <Button x:Name="SingleCrystalNobtn" Content="No" Style="{StaticResource cmdStyleCaption}" Click="cmdSingle_Crystal_Click" Width="30"/>
+                <Label Content=" " Width="50"/>
+                <Label Content="Ring Established:" Style="{StaticResource lblStyleCaption}" Width="125"/>
+                <Button x:Name="RingEstablishedYesbtn" Content="Yes" Style="{StaticResource cmdStyleCaption}" Click="cmdRing_Established_Click" Width="30"/>
+                <Button x:Name="RingEstablishedNobtn" Content="No" Style="{StaticResource cmdStyleCaption}" Click="cmdRing_Established_Click" Width="30"/>
+            </StackPanel>
+            <Label Content=" " Height="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Layering:" Style="{StaticResource lblStyleCaption}" FontSize="16" Width="637"/>
+                <Button x:Name="LayeringStartbtn" Content="Start" Style="{StaticResource cmdStyleCaption}" Click="cmdLayering_Click" Width="50"/>
+                <Button x:Name="LayeringStopbtn" Content="Stop" Style="{StaticResource cmdStyleCaption}" Click="cmdLayering_Click" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Comments:" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="LayeringCommentstxb" Text="{Binding LayeringComments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Style="{StaticResource txtbxStyleText}" Width="670"/>
+            </StackPanel>
+            <Label Content=" " Height="5"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Cooling Ramp Curve:" Style="{StaticResource lblStyleCaption}"/>
+                <ComboBox Name="CoolingRampcmb" ItemsSource="{Binding Path=CoolingRampCurvePath}" 
+                              SelectedItem="{Binding Path=CoolingRampCurve, UpdateSourceTrigger=PropertyChanged}" 
+                              IsEnabled="true" Width="200"/>
+            </StackPanel>
+            <Label Content=" " Height="15"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="P1 Defect Removal:" Style="{StaticResource lblStyleCaption}" FontSize="16" Width="637"/>
+                <Button x:Name="DefectStartbtn" Content="Start" Style="{StaticResource cmdStyleCaption}" Click="cmdDefect_Click" Width="50"/>
+                <Button x:Name="DefectStopbtn" Content="Stop" Style="{StaticResource cmdStyleCaption}" Click="cmdDefect_Click" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Comments:" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="DefectCommentstxb" Text="{Binding DefectComments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Style="{StaticResource txtbxStyleText}" Width="670"/>
+            </StackPanel>
+            <Label Content=" " Height="5"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="P1 Defect Found:" Style="{StaticResource lblStyleCaption}"/>
+                <Button x:Name="DefectFoundYesbtn" Content="Yes" Style="{StaticResource cmdStyleCaption}" Click="cmdDefect_Found_Click" Width="30"/>
+                <Button x:Name="DefectFoundNobtn" Content="No" Style="{StaticResource cmdStyleCaption}" Click="cmdDefect_Found_Click" Width="30"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,163 @@
+﻿<UserControl x:Class="Target_Filling_View.TargetFillingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Target_Filling_View"
+             xmlns:conv="clr-namespace:Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="539" d:DesignWidth="780"
+             Loaded="TargetFillingView_Loaded">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- specs how to display text -->
+                <ResourceDictionary Source="pack://application:,,,/Cryoview_Library;component/Cryoview_Library.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="5" Grid.RowSpan="8" Background="White"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1">
+            <StackPanel Orientation="Vertical" Width="185">
+                <Label HorizontalAlignment="Center"  Content="Layering Sphere Target Temp" Style="{StaticResource lblStyleCaption}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Prefill:" Style="{StaticResource lblStyleCaption}" Width="60"/>
+                    <TextBox x:Name="LSPrefillTTtxb" 
+                             Text="{Binding LSPrefillTargetTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="80"/>
+                    <Label Content="K" Style="{StaticResource lblStyleCaption}"/>
+                </StackPanel>
+                <Label Content="     " Height="5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Filling:" Style="{StaticResource lblStyleCaption}" Width="60"/>
+                    <TextBox x:Name="LSFillTTtxb" 
+                             Text="{Binding LSFillTargetTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="80"/>
+                    <Label Content="K" Style="{StaticResource lblStyleCaption}"/>
+                </StackPanel>
+                <Label Content="     "  Height="5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Postfill:" Style="{StaticResource lblStyleCaption}" Width="60"/>
+                    <TextBox x:Name="LSPostfillTTtxb" 
+                             Text="{Binding LSPostfillTargetTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="80"/>
+                    <Label Content="K" Style="{StaticResource lblStyleCaption}"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="185">
+                <Label HorizontalAlignment="Center"  Content="Cold Finger Target Temp" Style="{StaticResource lblStyleCaption}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Prefill:" Style="{StaticResource lblStyleCaption}" Width="60"/>
+                    <TextBox x:Name="CFEPrefillTTtxb" 
+                             Text="{Binding CFEPrefillTaretTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="80"/>
+                    <Label Content="K" Style="{StaticResource lblStyleCaption}"/>
+                </StackPanel>
+                <Label Content="     " Height="5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Filling:" Style="{StaticResource lblStyleCaption}" Width="60"/>
+                    <TextBox x:Name="CFEFillTTtxb" 
+                             Text="{Binding CFEFillTargetTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="80"/>
+                    <Label Content="K" Style="{StaticResource lblStyleCaption}"/>
+                </StackPanel>
+                <Label Content="     "  Height="5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Postfill:" Style="{StaticResource lblStyleCaption}" Width="60"/>
+                    <TextBox x:Name="CFEPostfillTTtxb" 
+                             Text="{Binding CFEPostfillTargetTemp, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="80"/>
+                    <Label Content="K" Style="{StaticResource lblStyleCaption}"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="185">
+                <Label HorizontalAlignment="Center"  Content="Desired Ice Thickness" Style="{StaticResource lblStyleCaption}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="   " Style="{StaticResource lblStyleCaption}" Width="40"/>
+                    <TextBox x:Name="TargetIceThicknesstxb" 
+                             Text="{Binding TargetIceThickness, Converter={conv:ConvertSingleToPrecision3}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="80"/>
+                    <Label Content="um" Style="{StaticResource lblStyleCaption}"/>
+                </StackPanel>
+                <Label Content="     "  Height="10"/>
+                <Label HorizontalAlignment="Center" Content="Exchange Gas Pressure (torr)" Style="{StaticResource lblStyleCaption}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Min:" Style="{StaticResource lblStyleCaption}"/>
+                    <TextBox x:Name="ExGasPressureMintxb" 
+                             Text="{Binding ExGasPressureMin, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="50"/>
+                    <Label Content="Max:" Style="{StaticResource lblStyleCaption}"/>
+                    <TextBox x:Name="ExGasPressureMaxtxb" 
+                             Text="{Binding ExGasPressureMax, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                             Style="{StaticResource txtbxStyleText}" Width="50"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="185">
+                <Label HorizontalAlignment="Center"  Content="Scrub Time (Minutes)" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="ScrubTimetxb" 
+                         Text="{Binding ScrubTime, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                         Style="{StaticResource txtbxStyleText}" Width="80" Height="30"/>
+                <Label Content="     "  Height="10"/>
+                <Label HorizontalAlignment="Center" Content="Number of Scrubs" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="NumScrubsstxb" 
+                         Text="{Binding NumScrubs, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                         Style="{StaticResource txtbxStyleText}" Width="80" Height="30"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Label Content="Comments: " Style="{StaticResource lblStyleCaption}" Grid.Row="2" Grid.Column="1" />
+        <TextBox x:Name="FillCommentstxb" Text="{Binding FillComments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                 Style="{StaticResource txtbxStyleText}" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Button x:Name="FillStartbtn" Content="Start" Style="{StaticResource cmdStyleCaption}" Click="cmdFill_Start_Click" Grid.Row="3" Grid.Column="1"/>
+        <Button x:Name="FillStopbtn" Content="Stop" Style="{StaticResource cmdStyleCaption}" Click="cmdFill_Stop_Click" Grid.Row="3" Grid.Column="2"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Scrub Number: " Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="Estimated Ice Thickness: " Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="Delta:" Style="{StaticResource lblStyleCaption}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="ScrubNumlbl" Content="{Binding ScrubNumber}" Style="{StaticResource lblStyleSetting}" Width="90" Height="25"/>
+                <Label x:Name="EstIceThicknesslbl" Content="{Binding EstIceThickness}" Style="{StaticResource lblStyleSetting}" Width="90" Height="25"/>
+                <Label x:Name="Deltalbl" Content="{Binding Delta}" Style="{StaticResource lblStyleSetting}" Width="90" Height="25"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="30,0,0,0">
+                <Label Content="DT Valve: " Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="Leak Detected:" Style="{StaticResource lblStyleCaption}"/>
+                <Label Content="Leak Detected At Target:" Style="{StaticResource lblStyleCaption}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="DTValvelbl" Content="{Binding DTValve}" Style="{StaticResource lblStyleSetting}" Width="150" Height="25"/>
+                <Label x:Name="LeakDetectionlbl" Content="{Binding LeakDetection}" Style="{StaticResource lblStyleSetting}" Width="150" Height="25"/>
+                <Label x:Name="LeakDetectionAtTargetlbl" Content="{Binding LeakDetectionAtTarget}" Style="{StaticResource lblStyleSetting}" Width="150" Height="25"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Label Content="Status: " Style="{StaticResource lblStyleCaption}" Grid.Row="6" Grid.Column="1"/>
+        <Label  x:Name="FillStatuslbl" Content="{Binding FillStatus}" Style="{StaticResource lblStyleSetting}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</UserControl>

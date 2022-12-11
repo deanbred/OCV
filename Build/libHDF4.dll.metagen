@@ -1,0 +1,245 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly libHDF4, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly libUtil, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class LLE.HDF4.DFACC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 READ IsConst : Public, Static, HasDefault
+    Int32 WRITE IsConst : Public, Static, HasDefault
+    Int32 CREATE IsConst : Public, Static, HasDefault
+    Int32 ALL IsConst : Public, Static, HasDefault
+    Int32 RDONLY IsConst : Public, Static, HasDefault
+    Int32 RDWR IsConst : Public, Static, HasDefault
+    Int32 CLOBBER IsConst : Public, Static, HasDefault
+    Int32 BUFFER IsConst : Public, Static, HasDefault
+    Int32 APPENDABLE IsConst : Public, Static, HasDefault
+    Int32 CURRENT IsConst : Public, Static, HasDefault
+    Int32 OLD IsConst : Public, Static, HasDefault
+Class LLE.HDF4.DFNT: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 FLOAT32 IsConst : Public, Static, HasDefault
+    Int32 FLOAT IsConst : Public, Static, HasDefault
+    Int32 FLOAT64 IsConst : Public, Static, HasDefault
+    Int32 DOUBLE IsConst : Public, Static, HasDefault
+    Int32 FLOAT128 IsConst : Public, Static, HasDefault
+    Int32 INT8 IsConst : Public, Static, HasDefault
+    Int32 UINT8 IsConst : Public, Static, HasDefault
+    Int32 INT16 IsConst : Public, Static, HasDefault
+    Int32 UINT16 IsConst : Public, Static, HasDefault
+    Int32 INT32 IsConst : Public, Static, HasDefault
+    Int32 UINT32 IsConst : Public, Static, HasDefault
+    Int32 INT64 IsConst : Public, Static, HasDefault
+    Int32 UINT64 IsConst : Public, Static, HasDefault
+    Int32 INT128 IsConst : Public, Static, HasDefault
+    Int32 UINT128 IsConst : Public, Static, HasDefault
+    Int32 UCHAR8 IsConst : Public, Static, HasDefault
+    Int32 UCHAR IsConst : Public, Static, HasDefault
+    Int32 CHAR8 IsConst : Public, Static, HasDefault
+    Int32 CHAR IsConst : Public, Static, HasDefault
+    Int32 CHAR16 IsConst : Public, Static, HasDefault
+    Int32 UCHAR16 IsConst : Public, Static, HasDefault
+Class LLE.HDF4.SDAttribute: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String name : Public
+Class LLE.HDF4.SDInt8Attribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, SByte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SByte value IsSignUnspecifiedByte : Public
+Class LLE.HDF4.SDInt16Attribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Int16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int16 value : Public
+Class LLE.HDF4.SDInt32Attribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 value IsLong : Public
+Class LLE.HDF4.SDUint8Attribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Byte): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Byte value : Public
+Class LLE.HDF4.SDUint16Attribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, UInt16): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt16 value : Public
+Class LLE.HDF4.SDUint32Attribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32 value IsLong : Public
+Class LLE.HDF4.SDFloatAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Single): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single value : Public
+Class LLE.HDF4.SDDoubleAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double value : Public
+Class LLE.HDF4.SDStringAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String value : Public
+Class LLE.HDF4.SDInt8ArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, SByte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    SByte[] value : Public
+Class LLE.HDF4.SDInt16ArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Int16[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int16[] value : Public
+Class LLE.HDF4.SDInt32ArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Int32[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32[] value : Public
+Class LLE.HDF4.SDUint8ArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Byte[] value : Public
+Class LLE.HDF4.SDUint16ArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, UInt16[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt16[] value : Public
+Class LLE.HDF4.SDUint32ArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, UInt32[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    UInt32[] value : Public
+Class LLE.HDF4.SDFloatArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Single[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single[] value : Public
+Class LLE.HDF4.SDDoubleArrayAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttribute
+    Void .ctor(System.String, Double[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double[] value : Public
+Class LLE.HDF4.SDAttributes: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetAttributeCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Set(String, Double): PrivateScope, Public, HideBySig
+    Set(String, Single): PrivateScope, Public, HideBySig
+    Set(String, UInt32 IsLong): PrivateScope, Public, HideBySig
+    Set(String, UInt16): PrivateScope, Public, HideBySig
+    Set(String, Byte): PrivateScope, Public, HideBySig
+    Set(String, Int32 IsLong): PrivateScope, Public, HideBySig
+    Set(String, Int16): PrivateScope, Public, HideBySig
+    Set(String, SByte IsSignUnspecifiedByte): PrivateScope, Public, HideBySig
+    Set(String, String): PrivateScope, Public, HideBySig
+    SetArray(String, Double[]): PrivateScope, Public, HideBySig
+    SetArray(String, Single[]): PrivateScope, Public, HideBySig
+    SetArray(String, UInt32[]): PrivateScope, Public, HideBySig
+    SetArray(String, UInt16[]): PrivateScope, Public, HideBySig
+    SetArray(String, Byte[]): PrivateScope, Public, HideBySig
+    SetArray(String, Int32[]): PrivateScope, Public, HideBySig
+    SetArray(String, Int16[]): PrivateScope, Public, HideBySig
+    SetArray(String, SByte[]): PrivateScope, Public, HideBySig
+    GetString(String): PrivateScope, Public, HideBySig
+    GetInt8(String): PrivateScope, Public, HideBySig
+    GetInt16(String): PrivateScope, Public, HideBySig
+    GetInt32(String): PrivateScope, Public, HideBySig
+    GetUint8(String): PrivateScope, Public, HideBySig
+    GetUint16(String): PrivateScope, Public, HideBySig
+    GetUint32(String): PrivateScope, Public, HideBySig
+    GetFloat(String): PrivateScope, Public, HideBySig
+    GetDouble(String): PrivateScope, Public, HideBySig
+    GetArray(String, Double[]): PrivateScope, Public, HideBySig
+    GetArray(String, Single[]): PrivateScope, Public, HideBySig
+    GetArray(String, UInt32[]): PrivateScope, Public, HideBySig
+    GetArray(String, UInt16[]): PrivateScope, Public, HideBySig
+    GetArray(String, Byte[]): PrivateScope, Public, HideBySig
+    GetArray(String, Int32[]): PrivateScope, Public, HideBySig
+    GetArray(String, Int16[]): PrivateScope, Public, HideBySig
+    GetArray(String, SByte[]): PrivateScope, Public, HideBySig
+    GetList(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class LLE.HDF4.SDFileAttributes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttributes
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetAttributeCount(): PrivateScope, Public, Virtual, HideBySig
+Class LLE.HDF4.SDDataSet: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetName(): PrivateScope, Public, HideBySig
+    GetType(): PrivateScope, Public, HideBySig
+    GetAttributes(): PrivateScope, Public, HideBySig
+    GetRef(): PrivateScope, Public, HideBySig
+    GetDimensions(): PrivateScope, Public, HideBySig
+    GetCompressType(): PrivateScope, Public, HideBySig
+    SetCompressNone(): PrivateScope, Public, HideBySig
+    SetCompressRLE(): PrivateScope, Public, HideBySig
+    SetCompressNBit(Int32 IsLong, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Int32, Int32): PrivateScope, Public, HideBySig
+    SetCompressSkpHuff(Int32): PrivateScope, Public, HideBySig
+    SetCompressDeflate(): PrivateScope, Public, HideBySig
+    SetCompressDeflate(Int32): PrivateScope, Public, HideBySig
+    GetCompressNBit(Int32* IsImplicitlyDereferenced, Boolean* IsImplicitlyDereferenced, Boolean* IsImplicitlyDereferenced, Int32* IsImplicitlyDereferenced, Int32* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetCompressSkpHuff(Int32* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    GetCompressDeflate(Int32* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    WriteData(Void*, Int32[], Int32[]): PrivateScope, Public, HideBySig
+    WriteData(T[,,], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    WriteData(T[,], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    WriteData(T[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    WriteData(Void*, Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    WriteData(T[,,], Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    WriteData(T[,], Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    WriteData(T[], Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(Void*, Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(T[,,], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(T[,], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(T[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(Void*, Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(T[,,], Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(T[,], Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    ReadData(T[], Int32[], Int32[], Int32[]): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class LLE.HDF4.SDLock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    LLE.HDF4.SDLock Instance : Public, Static
+Class LLE.HDF4.SD: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetDataSetCount(): PrivateScope, Public, HideBySig
+    GetAttributes(): PrivateScope, Public, HideBySig
+    CreateDataSet(String, Int32 IsLong, Int32[]): PrivateScope, Public, HideBySig
+    GetDataSet(Int32 IsLong): PrivateScope, Public, HideBySig
+    GetDataSet(String): PrivateScope, Public, HideBySig
+    GetDataSetByRef(Int32 IsLong): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class LLE.HDF4.SDDataSetAttributes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :LLE.HDF4.SDAttributes
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetAttributeCount(): PrivateScope, Public, Virtual, HideBySig

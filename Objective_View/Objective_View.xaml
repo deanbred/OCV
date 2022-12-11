@@ -1,0 +1,171 @@
+﻿<UserControl x:Class="Objective_View.ObjectiveView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Objective_View"
+             xmlns:conv="clr-namespace:Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="539" d:DesignWidth="780"
+             Loaded="ObjectiveView_Loaded">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- specs how to display text -->
+                <ResourceDictionary Source="pack://application:,,,/Cryoview_Library;component/Cryoview_Library.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="482*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.ColumnSpan="4" Grid.RowSpan="2" Background="White"/>
+
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Optical Camera 1" Style="{StaticResource lblStyleCaption}" FontSize="24" />
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Optical Camera 2" Style="{StaticResource lblStyleCaption}" FontSize="24" />
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+            <Label HorizontalContentAlignment="Center" Content="Zoom" Style="{StaticResource lblStyleCaption}" FontSize="20"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Limit:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="XZoomLimitlbl" Content="{Binding XZoomLimit}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="68,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Home:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="XZoomHomelbl" Content="{Binding XZoomHome}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="64,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Current Position:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="XZoomCurPoslbl" Content="{Binding XZoomCurPosition}" Style="{StaticResource lblStyleSetting}" Width="60"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="XZoomIncrease1btn" Content="+1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Zoom_Click" Width="30" Margin="50,20,0,10" />
+                <Button x:Name="XZoomDecrease1btn" Content="-1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Zoom_Click" Width="30" Margin="20,20,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="XZoomIncrease10btn" Content="+10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Zoom_Click" Width="30" Margin="50,0,0,10" />
+                <Button x:Name="XZoomDecrease10btn" Content="-10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Zoom_Click" Width="30" Margin="20,0,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Go To:" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="XZoomGoToPositiontxt" 
+                           Text="{Binding XZoomGoToPosition, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                           Style="{StaticResource txtbxStyleText}" Height="22" Width="60"/>
+                <Button x:Name="XZoomGoToPositionbtn" Content="Go" Style="{StaticResource cmdStyleCaption}" Click="cmd_Zoom_Go_Click" Width="30" Margin="10,0,0,0"/>
+            </StackPanel>
+            <Button x:Name="XZoomGoToLimitbtn" Content="Go To Limit" Style="{StaticResource cmdStyleCaption}" Click="cmd_Zoom_Go_Click"/>
+            <Button x:Name="XZoomGoToHomebtn" Content="Go To Home" Style="{StaticResource cmdStyleCaption}" Click="cmd_Zoom_Go_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <Label HorizontalContentAlignment="Center" Content="Focus" Style="{StaticResource lblStyleCaption}" FontSize="20"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Limit:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="XFocusLimitlbl" Content="{Binding XFocusLimit}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="68,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Home:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="XFocusHomelbl" Content="{Binding XFocusHome}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="64,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Current Position:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="XFocusCurPoslbl" Content="{Binding XFocusCurPosition}" Style="{StaticResource lblStyleSetting}" Width="60"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="XFocusIncrease1btn" Content="+1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Focus_Click" Width="30" Margin="50,20,0,10" />
+                <Button x:Name="XFocusDecrease1btn" Content="-1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Focus_Click" Width="30" Margin="20,20,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="XFocusIncrease10btn" Content="+10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Focus_Click" Width="30" Margin="50,0,0,10" />
+                <Button x:Name="XFocusDecrease10btn" Content="-10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Focus_Click" Width="30" Margin="20,0,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Go To:" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="XFocusGoToPositiontxt" 
+                           Text="{Binding XFocusGoToPosition, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                           Style="{StaticResource txtbxStyleText}" Height="22" Width="60"/>
+                <Button x:Name="XFocusGoToPositionbtn" Content="Go" Style="{StaticResource cmdStyleCaption}" Click="cmd_Focus_Go_Click" Width="30" Margin="10,0,0,0"/>
+            </StackPanel>
+            <Button x:Name="XFocusGoToLimitbtn" Content="Go To Limit" Style="{StaticResource cmdStyleCaption}" Click="cmd_Focus_Go_Click"/>
+            <Button x:Name="XFocusGoToHomebtn" Content="Go To Home" Style="{StaticResource cmdStyleCaption}" Click="cmd_Focus_Go_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+            <Label HorizontalContentAlignment="Center" Content="Zoom" Style="{StaticResource lblStyleCaption}" FontSize="20"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Limit:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="YZoomLimitlbl" Content="{Binding YZoomLimit}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="68,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Home:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="YZoomHomelbl" Content="{Binding YZoomHome}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="64,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Current Position:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="YZoomCurPoslbl" Content="{Binding YZoomCurPosition}" Style="{StaticResource lblStyleSetting}" Width="60"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="YZoomIncrease1btn" Content="+1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Zoom_Click" Width="30" Margin="50,20,0,10" />
+                <Button x:Name="YZoomDecrease1btn" Content="-1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Zoom_Click" Width="30" Margin="20,20,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="YZoomIncrease10btn" Content="+10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Zoom_Click" Width="30" Margin="50,0,0,10" />
+                <Button x:Name="YZoomDecrease10btn" Content="-10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Zoom_Click" Width="30" Margin="20,0,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Go To:" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="YZoomGoToPositiontxt" 
+                           Text="{Binding YZoomGoToPosition, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                           Style="{StaticResource txtbxStyleText}" Height="22" Width="60"/>
+                <Button x:Name="YZoomGoToPositionbtn" Content="Go" Style="{StaticResource cmdStyleCaption}" Click="cmd_Zoom_Go_Click" Width="30" Margin="10,0,0,0"/>
+            </StackPanel>
+            <Button x:Name="YZoomGoToLimitbtn" Content="Go To Limit" Style="{StaticResource cmdStyleCaption}" Click="cmd_Zoom_Go_Click"/>
+            <Button x:Name="YZoomGoToHomebtn" Content="Go To Home" Style="{StaticResource cmdStyleCaption}" Click="cmd_Zoom_Go_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
+            <Label HorizontalContentAlignment="Center" Content="Focus" Style="{StaticResource lblStyleCaption}" FontSize="20"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Limit:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="YFocusLimitlbl" Content="{Binding YFocusLimit}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="68,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Home:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="YFocusHomelbl" Content="{Binding YFocusHome}" Style="{StaticResource lblStyleSetting}" Width="60" Margin="64,3,3,3"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Current Position:" Style="{StaticResource lblStyleCaption}"/>
+                <Label x:Name="YFocusCurPoslbl" Content="{Binding YFocusCurPosition}" Style="{StaticResource lblStyleSetting}" Width="60"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="YFocusIncrease1btn" Content="+1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Focus_Click" Width="30" Margin="50,20,0,10" />
+                <Button x:Name="YFocusDecrease1btn" Content="-1" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Focus_Click" Width="30" Margin="20,20,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="YFocusIncrease10btn" Content="+10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Increase_Focus_Click" Width="30" Margin="50,0,0,10" />
+                <Button x:Name="YFocusDecrease10btn" Content="-10" Style="{StaticResource cmdStyleCaption}" Click="cmd_Decrease_Focus_Click" Width="30" Margin="20,0,0,10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Go To:" Style="{StaticResource lblStyleCaption}"/>
+                <TextBox x:Name="YFocusGoToPositiontxt" 
+                           Text="{Binding YFocusGoToPosition, Converter={conv:ConvertIntToString}, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                           Style="{StaticResource txtbxStyleText}" Height="22" Width="60"/>
+                <Button x:Name="YFocusGoToPositionbtn" Content="Go" Style="{StaticResource cmdStyleCaption}" Click="cmd_Focus_Go_Click" Width="30" Margin="10,0,0,0"/>
+            </StackPanel>
+            <Button x:Name="YFocusGoToLimitbtn" Content="Go To Limit" Style="{StaticResource cmdStyleCaption}" Click="cmd_Focus_Go_Click"/>
+            <Button x:Name="YFocusGoToHomebtn" Content="Go To Home" Style="{StaticResource cmdStyleCaption}" Click="cmd_Focus_Go_Click"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

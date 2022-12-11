@@ -1,0 +1,25 @@
+﻿<!-- There are two ways to start an application running:
+    1. Use the StartupUri attribute in the app xaml.
+    2. Remove the StartupUri attribute. Ctor the main window in the Application_Startup event.
+-->
+<!-- By specifying Application attributes for the events, we don't need to override the base class application event handlers. -->
+<!-- ShutdownMode implicitly shuts down the app when the last window in the app closes even if there is acurrently instantiated main window -->
+<Application x:Class="Cryoview_Main_View.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             ShutdownMode="OnLastWindowClose" 
+             Startup="Cryoview_Startup" 
+             Exit="Cryoview_Exit" 
+             Activated="Cryoview_Activated" 
+             Deactivated="Cryoview_Deactivated" 
+             SessionEnding="Cryoview_SessionEnding" 
+             DispatcherUnhandledException="Cryoview_DispatcherUnhandledException" 
+    >
+    <!-- StartupUri="Cryoview_Main_View.xaml" : won't be using. need parameterized ctor -->
+    <!-- we could put here any wpf resources that we want available thruout the entire application. 
+    But we are using the Cryoview.Resources project instead. -->
+    <Application.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
