@@ -10,4 +10,4 @@
   Generating Code...
   .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
   AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  libHDF4.vcxproj -> E:\Projects\OnCartViewing\branches\dbred\Build\libHDF4.dll
+  libHDF4.vcxproj -> C:\Users\deanb\source\repos\OCV\Build\libHDF4.dll

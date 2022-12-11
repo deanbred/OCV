@@ -28,3 +28,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\HDF_ViewModel.pdb
 E:\Projects\OnCartViewing\branches\dbred\HDF_ViewModel\obj\Debug\HDF_ViewModel.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\HDF_ViewModel\obj\Debug\HDF_ViewModel.dll
 E:\Projects\OnCartViewing\branches\dbred\HDF_ViewModel\obj\Debug\HDF_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\HDF_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\Build\HDF_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\HDF_ViewModel\obj\Debug\HDF_ViewModel.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\HDF_ViewModel\obj\Debug\HDF_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\HDF_ViewModel\obj\Debug\HDF_ViewModel.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\HDF_ViewModel\obj\Debug\HDF_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\HDF_ViewModel\obj\Debug\HDF_ViewModel.pdb

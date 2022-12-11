@@ -26,3 +26,9 @@ E:\Projects\OnCartViewing\branches\dbred\XRay_Interface\obj\Debug\XRay_Interface
 E:\Projects\OnCartViewing\branches\dbred\XRay_Interface\obj\Debug\XRay_Interface.csproj.CoreCompileInputs.cache
 E:\Projects\OnCartViewing\branches\dbred\XRay_Interface\obj\Debug\XRay_Interface.dll
 E:\Projects\OnCartViewing\branches\dbred\XRay_Interface\obj\Debug\XRay_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\XRay_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\Build\XRay_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\XRay_Interface\obj\Debug\XRay_Interface.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\XRay_Interface\obj\Debug\XRay_Interface.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\XRay_Interface\obj\Debug\XRay_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\XRay_Interface\obj\Debug\XRay_Interface.pdb

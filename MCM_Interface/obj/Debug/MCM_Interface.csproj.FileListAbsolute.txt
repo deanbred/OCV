@@ -25,3 +25,9 @@ E:\Projects\OnCartViewing\branches\dbred\MCM_Interface\obj\Debug\MCM_Interface.c
 E:\Projects\OnCartViewing\branches\dbred\MCM_Interface\obj\Debug\MCM_Interface.csproj.CoreCompileInputs.cache
 E:\Projects\OnCartViewing\branches\dbred\MCM_Interface\obj\Debug\MCM_Interface.dll
 E:\Projects\OnCartViewing\branches\dbred\MCM_Interface\obj\Debug\MCM_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\MCM_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\Build\MCM_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\MCM_Interface\obj\Debug\MCM_Interface.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\MCM_Interface\obj\Debug\MCM_Interface.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\MCM_Interface\obj\Debug\MCM_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\MCM_Interface\obj\Debug\MCM_Interface.pdb

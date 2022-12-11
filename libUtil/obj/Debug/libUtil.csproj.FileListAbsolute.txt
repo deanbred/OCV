@@ -28,3 +28,9 @@ E:\Projects\OnCartViewing\branches\dbred\libUtil\obj\Debug\libUtil.csproj.Assemb
 E:\Projects\OnCartViewing\branches\dbred\libUtil\obj\Debug\libUtil.csproj.CoreCompileInputs.cache
 E:\Projects\OnCartViewing\branches\dbred\libUtil\obj\Debug\libUtil.dll
 E:\Projects\OnCartViewing\branches\dbred\libUtil\obj\Debug\libUtil.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\libUtil.dll
+C:\Users\deanb\Source\Repos\OCV\Build\libUtil.pdb
+C:\Users\deanb\Source\Repos\OCV\libUtil\obj\Debug\libUtil.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\libUtil\obj\Debug\libUtil.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\libUtil\obj\Debug\libUtil.dll
+C:\Users\deanb\Source\Repos\OCV\libUtil\obj\Debug\libUtil.pdb

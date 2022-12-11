@@ -28,3 +28,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Illuminator_Gardasoft_Model.pdb
 E:\Projects\OnCartViewing\branches\dbred\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.dll
 E:\Projects\OnCartViewing\branches\dbred\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Illuminator_Gardasoft_Model.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Illuminator_Gardasoft_Model.pdb
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.dll
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Gardasoft_Model\obj\Debug\Illuminator_Gardasoft_Model.pdb

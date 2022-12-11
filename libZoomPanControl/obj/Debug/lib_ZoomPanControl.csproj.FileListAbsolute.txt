@@ -72,3 +72,14 @@ E:\Projects\OnCartViewing\branches\dbred\libZoomPanControl\obj\Debug\lib_ZoomPan
 E:\Projects\OnCartViewing\branches\dbred\libZoomPanControl\obj\Debug\lib_ZoomPanControl.csproj.CoreCompileInputs.cache
 E:\Projects\OnCartViewing\branches\dbred\libZoomPanControl\obj\Debug\lib_ZoomPanControl.dll
 E:\Projects\OnCartViewing\branches\dbred\libZoomPanControl\obj\Debug\lib_ZoomPanControl.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\lib_ZoomPanControl.dll
+C:\Users\deanb\Source\Repos\OCV\Build\lib_ZoomPanControl.pdb
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\lib_ZoomPanControl.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\lib_ZoomPanControl_MarkupCompile.cache
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\lib_ZoomPanControl_MarkupCompile.lref
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\Themes\Generic.baml
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\lib_ZoomPanControl.g.resources
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\lib_ZoomPanControl.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\lib_ZoomPanControl.dll
+C:\Users\deanb\Source\Repos\OCV\libZoomPanControl\obj\Debug\lib_ZoomPanControl.pdb

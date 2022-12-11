@@ -92,7 +92,7 @@ namespace Cryoview_Main_View
             bool bNetworkFound = CryoviewTools.OnNetwork();
             if (!bNetworkFound)
             {
-                MessageBox.Show("NO NETWORK CONNECTION!", m_appName, MessageBoxButton.OK);
+                MessageBox.Show("NO NETWORK CONNECTION!!", m_appName, MessageBoxButton.OK);
                 //Process.GetCurrentProcess().Kill();
             }
 

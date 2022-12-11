@@ -32,3 +32,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Cryoview_FileLog.pdb
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.dll
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Cryoview_FileLog.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Cryoview_FileLog.pdb
+C:\Users\deanb\Source\Repos\OCV\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.dll
+C:\Users\deanb\Source\Repos\OCV\Cryoview_FileLog\obj\Debug\Cryoview_FileLog.pdb

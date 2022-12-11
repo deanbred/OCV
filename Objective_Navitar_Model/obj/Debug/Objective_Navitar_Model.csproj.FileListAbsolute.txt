@@ -28,3 +28,7 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Objective_Navitar_Model.pdb
 E:\Projects\OnCartViewing\branches\dbred\Objective_Navitar_Model\obj\Debug\Objective_Navitar_Model.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Objective_Navitar_Model\obj\Debug\Objective_Navitar_Model.dll
 E:\Projects\OnCartViewing\branches\dbred\Objective_Navitar_Model\obj\Debug\Objective_Navitar_Model.pdb
+C:\Users\deanb\Source\Repos\OCV\Objective_Navitar_Model\obj\Debug\Objective_Navitar_Model.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Objective_Navitar_Model\obj\Debug\Objective_Navitar_Model.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Objective_Navitar_Model\obj\Debug\Objective_Navitar_Model.dll
+C:\Users\deanb\Source\Repos\OCV\Objective_Navitar_Model\obj\Debug\Objective_Navitar_Model.pdb

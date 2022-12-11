@@ -28,3 +28,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Objective_ViewModel.pdb
 E:\Projects\OnCartViewing\branches\dbred\Objective_ViewModel\obj\Debug\Objective_ViewModel.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Objective_ViewModel\obj\Debug\Objective_ViewModel.dll
 E:\Projects\OnCartViewing\branches\dbred\Objective_ViewModel\obj\Debug\Objective_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Objective_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Objective_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\Objective_ViewModel\obj\Debug\Objective_ViewModel.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Objective_ViewModel\obj\Debug\Objective_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Objective_ViewModel\obj\Debug\Objective_ViewModel.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\Objective_ViewModel\obj\Debug\Objective_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\Objective_ViewModel\obj\Debug\Objective_ViewModel.pdb

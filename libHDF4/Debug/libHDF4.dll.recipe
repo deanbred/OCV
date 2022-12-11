@@ -2,14 +2,14 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\Projects\OnCartViewing\branches\dbred\Build\libHDF4.dll</FullPath>
+      <FullPath>C:\Users\deanb\source\repos\OCV\Build\libHDF4.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
   <SatelliteDlls />
   <NonRecipeFileRefs>
     <NonRecipeFileRef>
-      <FullPath>E:\Projects\OnCartViewing\branches\dbred\libUtil\libUtil.csproj</FullPath>
+      <FullPath>C:\Users\deanb\source\repos\OCV\libUtil\libUtil.csproj</FullPath>
     </NonRecipeFileRef>
   </NonRecipeFileRefs>
 </Project>

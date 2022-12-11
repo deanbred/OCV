@@ -28,3 +28,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\XRay_Virtual_Model.pdb
 E:\Projects\OnCartViewing\branches\dbred\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.dll
 E:\Projects\OnCartViewing\branches\dbred\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\XRay_Virtual_Model.dll
+C:\Users\deanb\Source\Repos\OCV\Build\XRay_Virtual_Model.pdb
+C:\Users\deanb\Source\Repos\OCV\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.dll
+C:\Users\deanb\Source\Repos\OCV\XRay_Virtual_Model\obj\Debug\XRay_Virtual_Model.pdb

@@ -28,3 +28,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Cryoview_Tools.pdb
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_Tools\obj\Debug\Cryoview_Tools.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_Tools\obj\Debug\Cryoview_Tools.dll
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_Tools\obj\Debug\Cryoview_Tools.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Cryoview_Tools.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Cryoview_Tools.pdb
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Tools\obj\Debug\Cryoview_Tools.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Tools\obj\Debug\Cryoview_Tools.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Tools\obj\Debug\Cryoview_Tools.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Tools\obj\Debug\Cryoview_Tools.dll
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Tools\obj\Debug\Cryoview_Tools.pdb

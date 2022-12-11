@@ -58,3 +58,17 @@ E:\Projects\OnCartViewing\branches\dbred\HDF_View\obj\Debug\HDF_View.csproj.Core
 E:\Projects\OnCartViewing\branches\dbred\HDF_View\obj\Debug\HDF_View.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\HDF_View\obj\Debug\HDF_View.dll
 E:\Projects\OnCartViewing\branches\dbred\HDF_View\obj\Debug\HDF_View.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\HDF_View.dll
+C:\Users\deanb\Source\Repos\OCV\Build\HDF_View.pdb
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.g.cs
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View_MarkupCompile.cache
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View_MarkupCompile.lref
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.baml
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.g.resources
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.Properties.Resources.resources
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.csproj.GenerateResource.cache
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.dll
+C:\Users\deanb\Source\Repos\OCV\HDF_View\obj\Debug\HDF_View.pdb

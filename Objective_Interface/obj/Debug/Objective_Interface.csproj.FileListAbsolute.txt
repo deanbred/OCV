@@ -26,3 +26,9 @@ E:\Projects\OnCartViewing\branches\dbred\Objective_Interface\obj\Debug\Objective
 E:\Projects\OnCartViewing\branches\dbred\Objective_Interface\obj\Debug\Objective_Interface.csproj.CoreCompileInputs.cache
 E:\Projects\OnCartViewing\branches\dbred\Objective_Interface\obj\Debug\Objective_Interface.dll
 E:\Projects\OnCartViewing\branches\dbred\Objective_Interface\obj\Debug\Objective_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Objective_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Objective_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\Objective_Interface\obj\Debug\Objective_Interface.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Objective_Interface\obj\Debug\Objective_Interface.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Objective_Interface\obj\Debug\Objective_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\Objective_Interface\obj\Debug\Objective_Interface.pdb

@@ -27,3 +27,9 @@ E:\Projects\OnCartViewing\branches\dbred\Illuminator_Interface\obj\Debug\Illumin
 E:\Projects\OnCartViewing\branches\dbred\Illuminator_Interface\obj\Debug\Illuminator_Interface.csproj.CoreCompileInputs.cache
 E:\Projects\OnCartViewing\branches\dbred\Illuminator_Interface\obj\Debug\Illuminator_Interface.dll
 E:\Projects\OnCartViewing\branches\dbred\Illuminator_Interface\obj\Debug\Illuminator_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Illuminator_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Illuminator_Interface.pdb
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Interface\obj\Debug\Illuminator_Interface.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Interface\obj\Debug\Illuminator_Interface.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Interface\obj\Debug\Illuminator_Interface.dll
+C:\Users\deanb\Source\Repos\OCV\Illuminator_Interface\obj\Debug\Illuminator_Interface.pdb

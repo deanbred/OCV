@@ -34,3 +34,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Cryoview_Main_ViewModel.pdb
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.dll
 E:\Projects\OnCartViewing\branches\dbred\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Cryoview_Main_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Cryoview_Main_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\Cryoview_Main_ViewModel\obj\Debug\Cryoview_Main_ViewModel.pdb

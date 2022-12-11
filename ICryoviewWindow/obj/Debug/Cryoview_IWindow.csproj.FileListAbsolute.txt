@@ -32,3 +32,9 @@ E:\Projects\OnCartViewing\branches\dbred\ICryoviewWindow\obj\Debug\Cryoview_IWin
 E:\Projects\OnCartViewing\branches\dbred\ICryoviewWindow\obj\Debug\Cryoview_IWindow.csproj.CoreCompileInputs.cache
 E:\Projects\OnCartViewing\branches\dbred\ICryoviewWindow\obj\Debug\ICryoview.dll
 E:\Projects\OnCartViewing\branches\dbred\ICryoviewWindow\obj\Debug\ICryoview.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\ICryoview.dll
+C:\Users\deanb\Source\Repos\OCV\Build\ICryoview.pdb
+C:\Users\deanb\Source\Repos\OCV\ICryoviewWindow\obj\Debug\Cryoview_IWindow.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\ICryoviewWindow\obj\Debug\Cryoview_IWindow.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\ICryoviewWindow\obj\Debug\ICryoview.dll
+C:\Users\deanb\Source\Repos\OCV\ICryoviewWindow\obj\Debug\ICryoview.pdb

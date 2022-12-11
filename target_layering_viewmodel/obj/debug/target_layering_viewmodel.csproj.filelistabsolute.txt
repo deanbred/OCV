@@ -26,3 +26,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Target_Layering_ViewModel.pdb
 E:\Projects\OnCartViewing\branches\dbred\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.dll
 E:\Projects\OnCartViewing\branches\dbred\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Target_Layering_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Target_Layering_ViewModel.pdb
+C:\Users\deanb\Source\Repos\OCV\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.dll
+C:\Users\deanb\Source\Repos\OCV\Target_Layering_ViewModel\obj\Debug\Target_Layering_ViewModel.pdb

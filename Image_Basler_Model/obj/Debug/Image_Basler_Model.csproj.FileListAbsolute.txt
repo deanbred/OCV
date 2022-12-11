@@ -28,3 +28,10 @@ E:\Projects\OnCartViewing\branches\dbred\Build\Image_Basler_Model.pdb
 E:\Projects\OnCartViewing\branches\dbred\Image_Basler_Model\obj\Debug\Image_Basler_Model.csproj.CopyComplete
 E:\Projects\OnCartViewing\branches\dbred\Image_Basler_Model\obj\Debug\Image_Basler_Model.dll
 E:\Projects\OnCartViewing\branches\dbred\Image_Basler_Model\obj\Debug\Image_Basler_Model.pdb
+C:\Users\deanb\Source\Repos\OCV\Build\Image_Basler_Model.dll
+C:\Users\deanb\Source\Repos\OCV\Build\Image_Basler_Model.pdb
+C:\Users\deanb\Source\Repos\OCV\Image_Basler_Model\obj\Debug\Image_Basler_Model.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\OCV\Image_Basler_Model\obj\Debug\Image_Basler_Model.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\OCV\Image_Basler_Model\obj\Debug\Image_Basler_Model.csproj.CopyComplete
+C:\Users\deanb\Source\Repos\OCV\Image_Basler_Model\obj\Debug\Image_Basler_Model.dll
+C:\Users\deanb\Source\Repos\OCV\Image_Basler_Model\obj\Debug\Image_Basler_Model.pdb
